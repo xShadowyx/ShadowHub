@@ -1,9 +1,9 @@
 repeat wait() until game:IsLoaded()
 local PlaceId = game.PlaceId
 if PlaceId == 2753915549 or PlaceId == 4442272183 or PlaceId == 7449423635 then
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/BF.lua")()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/BloxFruits")()
 elseif PlaceId == 6284583030 then
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/PSX.lua")()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/PetSimulatorX")()
 else
     game.Players.LocalPlayer:Kick("Script not Supported!!")
 end
