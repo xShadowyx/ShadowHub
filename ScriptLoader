@@ -4,8 +4,6 @@ if PlaceId == 2753915549 or PlaceId == 4442272183 or PlaceId == 7449423635 then
     loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/BF.lua")()
 elseif PlaceId == 6284583030 then
     loadstring(game:HttpGet"https://raw.githubusercontent.com/RegularThunder/IsCute/main/PSX.lua")()
-elseif PlaceId == 914010731 then
-    loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/RegularThunder/IsCute/main/Ro-Ghoul.lua")))()
 else
     game.Players.LocalPlayer:Kick("Script not Supported!!")
 end
