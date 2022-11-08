@@ -1,0 +1,2 @@
+setclipboard("https://discord.gg/N7yAy3RSne")
+game.Players.LocalPlayer:Kick("Script is Updating join discord : discord link copied to clipboard!")
