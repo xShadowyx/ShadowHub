@@ -1,2 +1,2 @@
-local repo = 'https://raw.githubusercontent.com/RegularThunder/IsCute/main/'
-local Script = loadstring(game:HttpGet(repo .. 'Script'))()
+local scrr = 'https://raw.githubusercontent.com/RegularThunder/IsCute/main/'
+local Script = loadstring(game:HttpGet(scrr .. 'Script'))()
