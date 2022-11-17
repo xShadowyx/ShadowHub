@@ -15,7 +15,7 @@ local library = {
 		easingDirection = Enum.EasingDirection.Out
 	},
 	colors = {
-		main = Color3.fromRGB(128, 240, 255),
+		main = Color3.fromRGB(80, 245, 245),
 		background = Color3.fromRGB(40, 40, 40),
 		outerBorder = Color3.fromRGB(144, 137, 137),
 		innerBorder = Color3.fromRGB(73, 63, 73),
