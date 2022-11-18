@@ -18,9 +18,9 @@ local library = {
 		easingDirection = Enum.EasingDirection.Out
 	},
 	colors = {
-		main = Color3.fromRGB(51, 255, 51),
+		main = Color3.fromRGB(80, 245, 245),
 		background = Color3.fromRGB(40, 40, 40),
-		outerBorder = Color3.fromRGB(51, 255, 51),
+		outerBorder = Color3.fromRGB(80, 245, 245),
 		innerBorder = Color3.fromRGB(73, 63, 73),
 		topGradient = Color3.fromRGB(35, 35, 35),
 		bottomGradient = Color3.fromRGB(29, 29, 29),
@@ -35,7 +35,7 @@ local library = {
 		unhoveredOptionTop = Color3.fromRGB(50, 50, 50),
 		hoveredOptionBottom = Color3.fromRGB(45, 45, 45),
 		unhoveredOptionBottom = Color3.fromRGB(35, 35, 35),
-		tabText = Color3.fromRGB(51, 255, 51),
+		tabText = Color3.fromRGB(80, 245, 245),
 	},
 	gui_parent = (function()
 		local x, c = pcall(function()
