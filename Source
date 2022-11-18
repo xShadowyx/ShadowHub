@@ -1,5 +1,5 @@
-if game.CoreGui:FindFirstChild("QuartyzHub") then
-    game.CoreGui:FindFirstChild("QuartyzHub"):Destroy()
+if game.CoreGui:FindFirstChild("Thunder Hub") then
+    game.CoreGui:FindFirstChild("Thunder Hub"):Destroy()
 end
 
 local library = {
