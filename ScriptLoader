@@ -1,2 +1,4 @@
-local scrr = 'https://raw.githubusercontent.com/RegularThunder/IsCute/main/'
-local Script = loadstring(game:HttpGet(scrr .. 'Script'))()
+-- 𝕋𝕙𝕚𝕤 𝕊𝕔𝕣𝕚𝕡𝕥 𝕨𝕒𝕤 𝕞𝕒𝕕𝕖 𝕓𝕪 Thunder#7674 𝕠𝕟 𝔻𝕚𝕤𝕔𝕠𝕣𝕕 ( 𝔻𝕚𝕤𝕔𝕠𝕣𝕕 𝕀𝕟𝕧𝕚𝕥𝕖 ) 'https://discord.gg/N7yAy3RSne'
+
+   local scrr = 'https://raw.githubusercontent.com/RegularThunder/IsCute/main/'
+   local Script = loadstring(game:HttpGet(scrr .. 'Script'))()
