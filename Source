@@ -164,25 +164,25 @@ local function resolveid(image, flag)
 								end
 							end)
 							codename = string.sub(codename, 1, 24) .. tostring(fixes)
-							local fold = isfolder("./Quartyz Edition")
+							local fold = isfolder("./Thunder Hub")
 							if not fold then
-								makefolder("./Quartyz Edition")
+								makefolder("./Thunder Hub")
 							end
-							fold = isfolder("./Quartyz Edition/Themes")
+							fold = isfolder("./Thunder Hub/Themes")
 							if not fold then
-								makefolder("./Quartyz Edition/Themes")
+								makefolder("./Thunder Hub/Themes")
 							end
-							fold = isfolder("./Quartyz Edition/Themes/SynapseAssetsCache")
+							fold = isfolder("./Thunder Hub/Themes/SynapseAssetsCache")
 							if not fold then
-								makefolder("./Quartyz Edition Themes/SynapseAssetsCache")
+								makefolder("./Thunder Hub Themes/SynapseAssetsCache")
 							end
-							if not fold or not isfile("./Quartyz Edition/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
+							if not fold or not isfile("./Thunder Hub/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
 								local res = game:HttpGet(string.sub(image, 15))
 								if res ~= nil then
-									writefile("./Quartyz Edition/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
+									writefile("./Thunder Hub/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
 								end
 							end
-							return getsynasset(readfile("./Quartyz Edition/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
+							return getsynasset(readfile("./Thunder Hub/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
 						end)
 						if x and e ~= nil then
 							return e
