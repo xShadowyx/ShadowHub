@@ -2,7 +2,7 @@ local library = {
     flags = { },
     items = { }
 }
-_G.Color = Color3.fromRGB(0, 254, 216)
+_G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(15, 15, 15)
 if _G.Color == nil then _G.Color = Color3.fromRGB(255, 255, 255) end
 if _G.Color2 == nil then _G.Color2 = Color3.fromRGB(255, 255, 255) end
@@ -23,7 +23,7 @@ library.theme = {
     fontsize = 14,
     titlesize = 15.5,
     font = Enum.Font.Code,
-    background = "http://www.roblox.com/asset/?id=9384417565",
+    background = "http://www.roblox.com/asset/?id=11429437485",
     tilesize = 430,
     cursor = false,
     cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
