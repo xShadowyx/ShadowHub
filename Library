@@ -1980,7 +1980,7 @@ function ShadowyLib:Window(text,mainclr,cls)
                 Label.Size = UDim2.new(0, 325, 0, 20)
                 Label.Font = Enum.Font.Gotham
                 Label.TextColor3 = PresetColor
-                Label.TextSize = 12.000
+                Label.TextSize = 14.000
                 Label.Text = text
                 Label.TextXAlignment = Enum.TextXAlignment.Left
             
