@@ -1974,7 +1974,7 @@ function ShadowyLib:Window(text,mainclr,cls)
                 local labelfunc = {}
             
                 Label.Name = "Label"
-                Label.Parent = MainFramePage
+                Label.Parent = ChannelHolder
                 Label.BackgroundColor3 = PresetColor
                 Label.BackgroundTransparency = 1.000
                 Label.Size = UDim2.new(0, 325, 0, 20)
