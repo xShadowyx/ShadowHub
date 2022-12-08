@@ -1273,7 +1273,7 @@ function ShadowyLib:Window(text,mainclr,cls)
                 Sep2.Parent = Seperator
                 Sep2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 Sep2.BackgroundTransparency = 1.000
-                Sep2.Position = UDim2.new(0, 132, 0, 0)
+                Sep2.Position = UDim2.new(0, 136, 0, 0)
                 Sep2.Size = UDim2.new(0, 110, 0, 20)
                 Sep2.Font = Enum.Font.Gotham
                 Sep2.Text = text
