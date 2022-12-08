@@ -1250,6 +1250,26 @@ function ShadowyLib:Window(text,mainclr,cls)
 				return SliderFunc
 			end
 
+            function ChannelContent:Line()
+                local Line1 = Instance.new("Frame")
+                local Line2 = Instance.new("Frame")
+            
+                Line1.Name = "Line1"
+                Line1.Parent = ChannelHolder
+                Line1.BackgroundColor3 = PresetColor
+                Line1.BackgroundTransparency = 1.000
+                Line1.Position = UDim2.new(0, 0, 0.350318581, 0)
+                Line1.Size = UDim2.new(0, 100, 0, 8)
+            
+                Line2.Name = "Line2"
+                Line2.Parent = Line1
+                Line2.BackgroundColor3 = PresetColor
+                Line2.BorderSizePixel = 0
+                Line2.Position = UDim2.new(0, 0, 0, 4)
+                Line2.Size = UDim2.new(0, 401, 0, 1)
+                ChannelHolder.CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)
+            end            
+
 			function ChannelContent:Seperator(text)
                 local Seperator = Instance.new("Frame")
                 local Sep1 = Instance.new("Frame")
@@ -1949,41 +1969,30 @@ function ShadowyLib:Window(text,mainclr,cls)
 			end
 
 			function ChannelContent:Label(text)
-				local Label = Instance.new("TextButton")
-				local LabelTitle = Instance.new("TextLabel")
-				local labelfunc = {}
-				Label.Name = "Label"
-
-				Label.Parent = ChannelHolder
-				Label.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-				Label.BorderSizePixel = 0
-				Label.Position = UDim2.new(0.261979163, 0, 0.190789461, 0)
-				Label.Size = UDim2.new(0, 401, 0, 30)
-				Label.AutoButtonColor = false
-				Label.Font = Enum.Font.Gotham
-				Label.Text = ""
-				Label.TextColor3 = PresetColor
-				Label.TextSize = 14.000
-
-				LabelTitle.Name = "LabelTitle"
-				LabelTitle.Parent = Label
-				LabelTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				LabelTitle.BackgroundTransparency = 1.000
-				LabelTitle.Position = UDim2.new(0, 5, 0, 0)
-				LabelTitle.Size = UDim2.new(0, 200, 0, 30)
-				LabelTitle.Font = Enum.Font.Gotham
-				LabelTitle.Text = text
-				LabelTitle.TextColor3 = PresetColor
-				LabelTitle.TextSize = 14.000
-				LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-				ChannelHolder.CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)
-
-				function labelfunc:Refresh(tochange)
-					Label.Text = tochange
-				end
-				return labelfunc
-			end
+                local Label = Instance.new("TextLabel")
+                local PaddingLabel = Instance.new("UIPadding")
+                local labelfunc = {}
+            
+                Label.Name = "Label"
+                Label.Parent = MainFramePage
+                Label.BackgroundColor3 = PresetColor
+                Label.BackgroundTransparency = 1.000
+                Label.Size = UDim2.new(0, 325, 0, 20)
+                Label.Font = Enum.Font.Gotham
+                Label.TextColor3 = PresetColor
+                Label.TextSize = 12.000
+                Label.Text = text
+                Label.TextXAlignment = Enum.TextXAlignment.Left
+            
+                PaddingLabel.PaddingLeft = UDim.new(0,15)
+                PaddingLabel.Parent = Label
+                PaddingLabel.Name = "PaddingLabel"
+                ChannelHolder.CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)
+                function labelfunc:Set(newtext)
+                    Label.Text = newtext
+                end
+                return labelfunc
+            end            
 
 			function ChannelContent:Bind(text, presetbind, callback)
 				local Key = presetbind.Name
