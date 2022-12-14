@@ -1423,42 +1423,52 @@ function xShadowxLib:Window(text,mainclr,cls)
 				DropItemHolderLayout.Parent = DropItemHolder
 				DropItemHolderLayout.SortOrder = Enum.SortOrder.LayoutOrder
 				DropItemHolderLayout.Padding = UDim.new(0, 0)
-
+				
 				DropdownFrameBtn.MouseButton1Click:Connect(function()
 					if DropTog == false then
 						DropdownFrameMain.Visible = true
 						DropdownFrameMainOutline.Visible = true
 						TweenService:Create(
 							Dropdown,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{Size = UDim2.new(0, 403, 0, 60 + DropdownFrameMainOutline.AbsoluteSize.Y)}
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{Size = UDim2.new(0, 403, 0, 73 + DropdownFrameMainOutline.AbsoluteSize.Y)}
 						):Play()
 						TweenService:Create(
+							ArrowImg,
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{Rotation = 360}
+						):Play()
+						wait(.2)
+						TweenService:Create(
 							ChannelHolder,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)}
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)}
 						):Play()
 					else
 						DropdownFrameMain.Visible = false
 						DropdownFrameMainOutline.Visible = false
 						TweenService:Create(
 							Dropdown,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{Size = UDim2.new(0, 403, 0, 60)}
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{Size = UDim2.new(0, 403, 0, 73)}
 						):Play()
 						TweenService:Create(
-							ChannelHolder,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)}
+							ArrowImg,
+							TweenInfo.new(.3, Enum.EasingStyle.Quart),
+							{Rotation = 180}
 						):Play()
 						wait(.2)
+						TweenService:Create(
+							ChannelHolder,
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)}
+						):Play()
 					end
 					DropTog = not DropTog
 				end)
-
-				for i, v in next, list do
+				
+				for i,v in next, list do
 					itemcount = itemcount + 1
-
 					if itemcount == 1 then
 						framesize = 29
 					elseif itemcount == 2 then
@@ -1466,7 +1476,7 @@ function xShadowxLib:Window(text,mainclr,cls)
 					elseif itemcount >= 3 then
 						framesize = 87
 					end
-
+					
 					local Item = Instance.new("TextButton")
 					local ItemCorner = Instance.new("UICorner")
 					local ItemText = Instance.new("TextLabel")
@@ -1493,21 +1503,21 @@ function xShadowxLib:Window(text,mainclr,cls)
 					ItemText.Position = UDim2.new(0.0211081803, 0, 0, 0)
 					ItemText.Size = UDim2.new(0, 192, 0, 29)
 					ItemText.Font = Enum.Font.Gotham
-					ItemText.TextColor3 = PresetColor
+					ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemText.TextSize = 14.000
 					ItemText.TextXAlignment = Enum.TextXAlignment.Left
 					ItemText.Text = v
-
+					
 					Item.MouseEnter:Connect(function()
-						ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
+						ItemText.TextColor3 = Color3.fromRGB(255,255,255)
 						Item.BackgroundTransparency = 0
 					end)
-
+					
 					Item.MouseLeave:Connect(function()
 						ItemText.TextColor3 = PresetColor
 						Item.BackgroundTransparency = 1
 					end)
-
+					
 					Item.MouseButton1Click:Connect(function()
 						CurrentSelectedText.Text = v
 						CurrentSelectedText.TextTransparency = 0.250
@@ -1516,48 +1526,47 @@ function xShadowxLib:Window(text,mainclr,cls)
 						DropdownFrameMainOutline.Visible = false
 						TweenService:Create(
 							Dropdown,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{Size = UDim2.new(0, 403, 0, 60)}
-						):Play()
-						TweenService:Create(
-							ChannelHolder,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)}
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{Size = UDim2.new(0, 403, 0, 73)}
 						):Play()
 						wait(.2)
+						TweenService:Create(
+							ChannelHolder,
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)}
+						):Play()
 						DropTog = not DropTog
 					end)
-
-					DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, DropItemHolderLayout.AbsoluteContentSize.Y)
-
+					
+					DropItemHolder.CanvasSize = UDim2.new(0,0,0,DropItemHolderLayout.AbsoluteContentSize.Y)
+					
 					DropItemHolder.Size = UDim2.new(0, 385, 0, framesize)
 					DropdownFrameMain.Size = UDim2.new(0, 392, 0, framesize + 6)
 					DropdownFrameMainOutline.Size = UDim2.new(0, 396, 0, framesize + 10)
 				end
-
-				ChannelHolder.CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)
-
+				
+				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
+				
 				function DropFunc:Clear()
-					for i, v in next, DropItemHolder:GetChildren() do
+					for i,v in next, DropItemHolder:GetChildren() do
 						if v.Name == "Item" then
 							v:Destroy()
 						end
-					end
-
+					end						
+					
 					CurrentSelectedText.Text = text
-					CurrentSelectedText.TextTransparency = 0.250
-
+					
 					itemcount = 0
 					framesize = 0
 					DropItemHolder.Size = UDim2.new(0, 385, 0, 0)
 					DropdownFrameMain.Size = UDim2.new(0, 392, 0, 0)
 					DropdownFrameMainOutline.Size = UDim2.new(0, 396, 0, 0)
-					Dropdown.Size = UDim2.new(0, 403, 0, 60)
+					Dropdown.Size = UDim2.new(0, 403, 0, 73)
 					DropdownFrameMain.Visible = false
 					DropdownFrameMainOutline.Visible = false
 					ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 				end
-
+				
 				function DropFunc:Add(textadd)
 					itemcount = itemcount + 1
 
@@ -1595,13 +1604,13 @@ function xShadowxLib:Window(text,mainclr,cls)
 					ItemText.Position = UDim2.new(0.0211081803, 0, 0, 0)
 					ItemText.Size = UDim2.new(0, 192, 0, 29)
 					ItemText.Font = Enum.Font.Gotham
-					ItemText.TextColor3 = PresetColor
+					ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemText.TextSize = 14.000
 					ItemText.TextXAlignment = Enum.TextXAlignment.Left
 					ItemText.Text = textadd
 
 					Item.MouseEnter:Connect(function()
-						ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
+						ItemText.TextColor3 = Color3.fromRGB(255,255,255)
 						Item.BackgroundTransparency = 0
 					end)
 
@@ -1618,19 +1627,19 @@ function xShadowxLib:Window(text,mainclr,cls)
 						DropdownFrameMainOutline.Visible = false
 						TweenService:Create(
 							Dropdown,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{Size = UDim2.new(0, 403, 0, 60)}
-						):Play()
-						TweenService:Create(
-							ChannelHolder,
-							TweenInfo.new(.5, Enum.EasingStyle.Quart),
-							{CanvasSize = UDim2.new(0, 0, 0, ChannelHolderLayout.AbsoluteContentSize.Y)}
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{Size = UDim2.new(0, 403, 0, 73)}
 						):Play()
 						wait(.2)
+						TweenService:Create(
+							ChannelHolder,
+							TweenInfo.new(.2, Enum.EasingStyle.Quart),
+							{CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)}
+						):Play()
 						DropTog = not DropTog
 					end)
 
-					DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, DropItemHolderLayout.AbsoluteContentSize.Y)
+					DropItemHolder.CanvasSize = UDim2.new(0,0,0,DropItemHolderLayout.AbsoluteContentSize.Y)
 
 					DropItemHolder.Size = UDim2.new(0, 385, 0, framesize)
 					DropdownFrameMain.Size = UDim2.new(0, 392, 0, framesize + 6)
