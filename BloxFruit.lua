@@ -6,7 +6,7 @@
  /        \|   Y  \/ __ \_/ /_/ (  <_> )     / 
 /_______  /|___|  (____  /\____ |\____/ \/\_/  
         \/______\/_____\/______\/_______________________________________________________              
-         \_Shadow Hub | Community -->> Discord Server : https://discord.gg/N7yAy3RSne _/
+         \_Shadow Hub | Community -->> Discord Server : discord.com/invite/N7yAy3RSne__/
 
 ]]--
 
